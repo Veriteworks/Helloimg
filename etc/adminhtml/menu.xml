@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Veriteworks_Helloimg::manager" title="Hello Img Manager" module="Veriteworks_Helloimg" sortOrder="10" resource="Veriteworks_Helloimg::manager"/>
+        <add id="Veriteworks_Helloimg::add_row" title="Hello Img Manager lev2" module="Veriteworks_Helloimg" sortOrder="10" parent="Veriteworks_Helloimg::manager" action="imggrid/grid" resource="Veriteworks_Helloimg::add_row"/>
+    </menu>
+</config>
