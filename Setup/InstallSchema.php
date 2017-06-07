@@ -34,7 +34,6 @@ class InstallSchema implements InstallSchemaInterface
          */
         $installer->getConnection()->dropTable($installer->getTable('veriteworks_helloimg_img'));
 
-
         $table = $installer->getConnection()->newTable(
             $installer->getTable('veriteworks_helloimg_img')
         )->addColumn(

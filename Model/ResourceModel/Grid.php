@@ -10,7 +10,7 @@ class Grid extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     /**
      * @var string
      */
-    protected $_idFieldName = 'id';
+    protected $_idFieldName = 'img_id';
     /**
      * @var \Magento\Framework\Stdlib\DateTime\DateTime
      */
@@ -38,6 +38,6 @@ class Grid extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      */
     protected function _construct()
     {
-        $this->_init('veriteworks_helloimg_img', 'id');
+        $this->_init('veriteworks_helloimg_img', 'img_id');
     }
 }

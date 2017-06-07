@@ -18,17 +18,17 @@
     </argument>
     <dataSource name="helloimggrid_record_grid_list_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Veriteworks\Emsshipping\Ui\Component\DataProvider</argument>
+            <argument name="class" xsi:type="string">Veriteworks\Helloimg\Ui\Component\DataProvider</argument>
             <!-- here we pass dataprovider name which i will define in di.xml file of module in next step -->
             <argument name="name" xsi:type="string">helloimggrid_record_grid_list_data_source</argument>
-            <argument name="primaryFieldName" xsi:type="string">pk</argument>
-            <argument name="requestFieldName" xsi:type="string">pk</argument>
+            <argument name="primaryFieldName" xsi:type="string">img_id</argument>
+            <argument name="requestFieldName" xsi:type="string">img_id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="update_url" xsi:type="url" path="mui/index/render"/>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
                     <item name="storageConfig" xsi:type="array">
-                        <item name="indexField" xsi:type="string">pk</item>
+                        <item name="indexField" xsi:type="string">img_id</item>
                     </item>
                 </item>
             </argument>
@@ -90,7 +90,7 @@
                 <item name="config" xsi:type="array">
                     <item name="selectProvider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
-                    <item name="indexField" xsi:type="string">id</item>
+                    <item name="indexField" xsi:type="string">img_id</item>
                 </item>
             </argument>
             <!-- Mass actions which you want to add in your grid-->
@@ -99,7 +99,7 @@
                     <item name="config" xsi:type="array">
                         <item name="type" xsi:type="string">delete</item>
                         <item name="label" xsi:type="string" translate="true">Delete</item>
-                        <item name="url" xsi:type="url" path="emsgrid/grid/massdelete"/>
+                        <item name="url" xsi:type="url" path="helloimg/grid/massdelete"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Delete</item>
                             <item name="message" xsi:type="string" translate="true">Do you want to delete selected row record?</item>
@@ -125,102 +125,28 @@
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="indexField" xsi:type="string">pk</item>
+                    <item name="indexField" xsi:type="string">img_id</item>
                     <item name="sorting" xsi:type="string">desc</item>
                     <item name="sortOrder" xsi:type="number">0</item>
                 </item>
             </argument>
         </selectionsColumn>
-        <column name="website_id" >
-            <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Veriteworks\Emsshipping\Model\Websites</item>
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
-                    <item name="dataType" xsi:type="string">select</item>
-                    <item name="label" xsi:type="string" translate="true">WEBSITE</item>
-                    <item name="sortOrder" xsi:type="number">10</item>
-                </item>
-            </argument>
-        </column>
-        <column name="dest_country_id" >
-            <argument name="data" xsi:type="array">
-                <!--<item name="options" xsi:type="object">Magento\Directory\Model\Config\Source\Country</item>-->
-                <item name="options" xsi:type="object">Veriteworks\Emsshipping\Model\Countryname</item>
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
-                    <item name="dataType" xsi:type="string">select</item>
-                    <item name="label" xsi:type="string" translate="true">COUNTRY</item>
-                    <item name="sortOrder" xsi:type="number">11</item>
-                </item>
-            </argument>
-        </column>
-        <column name="dest_region_id" >
-            <argument name="data" xsi:type="array">
-                <!--<item name="options" xsi:type="object">Magento\Directory\Model\Config\Source\Allregion</item>-->
-                <item name="options" xsi:type="object">Veriteworks\Emsshipping\Model\Regionname</item>
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
-                    <item name="dataType" xsi:type="string">select</item>
-                    <item name="label" xsi:type="string" translate="true">REGION</item>
-                    <item name="sortOrder" xsi:type="number">12</item>
-                </item>
-            </argument>
-        </column>
-        <column name="dest_zip" >
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">DEST ZIP</item>
-                    <item name="sortOrder" xsi:type="number">13</item>
-                </item>
-            </argument>
-        </column>
-        <column name="condition_name">
+        <column name="title">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">CONDITION NAME</item>
-                    <item name="sortOrder" xsi:type="number">14</item>
+                    <item name="label" xsi:type="string" translate="true">TITLE</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
                 </item>
             </argument>
         </column>
-        <column name="condition_value">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">textRange</item>
-                    <item name="label" xsi:type="string" translate="true">CONDITION VALUE</item>
-                    <item name="sortOrder" xsi:type="number">15</item>
-                </item>
-            </argument>
-        </column>
-        <column name="price">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">textRange</item>
-                    <item name="label" xsi:type="string" translate="true">PRICE</item>
-                    <item name="sortOrder" xsi:type="number">16</item>
-                </item>
-            </argument>
-        </column>
-        <!--<column name="cost">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">COST</item>
-                    <item name="sortOrder" xsi:type="number">17</item>
-                </item>
-            </argument>
-        </column>-->
         <!-- Add Action with each row of grid and for this we will create a class Action -->
-        <actionsColumn name="actions" class="Veriteworks\Emsshipping\Ui\Component\Listing\Grid\Column\Action">
+        <actionsColumn name="actions" class="Veriteworks\Helloimg\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
                     <item name="resizeDefaultWidth" xsi:type="string">100</item>
-                    <item name="indexField" xsi:type="string">id</item>
+                    <item name="indexField" xsi:type="string">img_id</item>
                     <item name="sortOrder" xsi:type="number">100</item>
                 </item>
             </argument>

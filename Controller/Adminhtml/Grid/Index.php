@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: imran
- * Date: 16/06/01
- * Time: 18:02
- */
 namespace Veriteworks\Helloimg\Controller\Adminhtml\Grid;
 
 class Index extends \Magento\Backend\App\Action

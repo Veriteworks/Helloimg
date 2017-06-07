@@ -18,11 +18,11 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
     }
     public function getId()
     {
-        return $this->getData(self::ID);
+        return $this->getData(self::IMG_ID);
     }
-    public function setId($id)
+    public function setId($img_id)
     {
-        return $this->setData(self::ID, $id);
+        return $this->setData(self::IMG_ID, $img_id);
     }
     public function getTitle()
     {
