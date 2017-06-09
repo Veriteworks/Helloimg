@@ -11,8 +11,8 @@ interface GridInterface
     const TITLE = 'title';
     const IMAGE = 'image';
 
-    public function getId();
-    public function setId($img_id);
+    public function getImgId();
+    public function setImgId($img_id);
     public function getTitle();
     public function setTitle($title);
     public function getImage();

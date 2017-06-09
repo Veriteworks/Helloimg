@@ -90,7 +90,7 @@
                 <item name="config" xsi:type="array">
                     <item name="selectProvider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
-                    <item name="indexField" xsi:type="string">img_id</item>
+                    <item name="indexField" xsi:type="string">id</item>
                 </item>
             </argument>
             <!-- Mass actions which you want to add in your grid-->
@@ -146,7 +146,7 @@
                 <item name="config" xsi:type="array">
                     <item name="resizeEnabled" xsi:type="boolean">false</item>
                     <item name="resizeDefaultWidth" xsi:type="string">100</item>
-                    <item name="indexField" xsi:type="string">img_id</item>
+                    <item name="indexField" xsi:type="string">id</item>
                     <item name="sortOrder" xsi:type="number">100</item>
                 </item>
             </argument>
