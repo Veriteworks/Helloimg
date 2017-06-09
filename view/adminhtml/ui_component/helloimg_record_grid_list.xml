@@ -3,8 +3,8 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list_data_source</item>
-            <item name="deps" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list_data_source</item>
+            <item name="provider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list_data_source</item>
+            <item name="deps" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list_data_source</item>
         </item>
         <item name="spinner" xsi:type="string">veriteworks_helloimg_grid_columns</item>
         <item name="buttons" xsi:type="array">
@@ -16,11 +16,11 @@
             </item>
         </item>
     </argument>
-    <dataSource name="helloimggrid_record_grid_list_data_source">
+    <dataSource name="helloimg_record_grid_list_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Veriteworks\Helloimg\Ui\Component\DataProvider</argument>
             <!-- here we pass dataprovider name which i will define in di.xml file of module in next step -->
-            <argument name="name" xsi:type="string">helloimggrid_record_grid_list_data_source</argument>
+            <argument name="name" xsi:type="string">helloimg_record_grid_list_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">img_id</argument>
             <argument name="requestFieldName" xsi:type="string">img_id</argument>
             <argument name="data" xsi:type="array">
@@ -50,7 +50,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
-                        <item name="provider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns</item>
+                        <item name="provider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.veriteworks_helloimg_grid_columns</item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
                     <item name="displayArea" xsi:type="string">dataGridActions</item>
@@ -60,9 +60,9 @@
         <filters name="listing_filters">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="columnsProvider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns</item>
+                    <item name="columnsProvider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.veriteworks_helloimg_grid_columns</item>
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.listing_top.bookmarks</item>
                         <item name="namespace" xsi:type="string">current.filters</item>
                     </item>
                     <item name="templates" xsi:type="array">
@@ -74,9 +74,9 @@
                         </item>
                     </item>
                     <item name="childDefaults" xsi:type="array">
-                        <item name="provider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.listing_top.listing_filters</item>
+                        <item name="provider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.listing_top.listing_filters</item>
                         <item name="imports" xsi:type="array">
-                            <item name="visible" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns.${ $.index }:visible</item>
+                            <item name="visible" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.veriteworks_helloimg_grid_columns.${ $.index }:visible</item>
                         </item>
                     </item>
                 </item>
@@ -88,7 +88,7 @@
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
                     <item name="indexField" xsi:type="string">id</item>
                 </item>
@@ -112,10 +112,10 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.listing_top.bookmarks</item>
+                        <item name="provider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.listing_top.bookmarks</item>
                         <item name="namespace" xsi:type="string">current.paging</item>
                     </item>
-                    <item name="selectProvider" xsi:type="string">helloimggrid_record_grid_list.helloimggrid_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">helloimg_record_grid_list.helloimg_record_grid_list.veriteworks_helloimg_grid_columns.ids</item>
                 </item>
             </argument>
         </paging>
@@ -131,15 +131,15 @@
                 </item>
             </argument>
         </selectionsColumn>
-        <column name="title">
+        <!--<column name="condition_name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">TITLE</item>
-                    <item name="sortOrder" xsi:type="number">1</item>
+                    <item name="label" xsi:type="string" translate="true">CONDITION NAME</item>
+                    <item name="sortOrder" xsi:type="number">14</item>
                 </item>
             </argument>
-        </column>
+        </column>-->
         <!-- Add Action with each row of grid and for this we will create a class Action -->
         <actionsColumn name="actions" class="Veriteworks\Helloimg\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">

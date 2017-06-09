@@ -10,7 +10,7 @@
         <arguments>
             <argument name="collections" xsi:type="array">
                 <!--data provider name which used in grid ui component file -->
-                <item name="helloimggrid_record_grid_list_data_source" xsi:type="string">VwCollection</item>
+                <item name="helloimg_record_grid_list_data_source" xsi:type="string">VwCollection</item>
             </argument>
         </arguments>
     </type>
