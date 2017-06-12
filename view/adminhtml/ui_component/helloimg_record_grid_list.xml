@@ -131,15 +131,15 @@
                 </item>
             </argument>
         </selectionsColumn>
-        <!--<column name="condition_name">
+        <column name="title">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">CONDITION NAME</item>
+                    <item name="label" xsi:type="string" translate="true">TITLE</item>
                     <item name="sortOrder" xsi:type="number">14</item>
                 </item>
             </argument>
-        </column>-->
+        </column>
         <!-- Add Action with each row of grid and for this we will create a class Action -->
         <actionsColumn name="actions" class="Veriteworks\Helloimg\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">

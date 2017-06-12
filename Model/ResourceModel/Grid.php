@@ -3,7 +3,7 @@
 namespace Veriteworks\Helloimg\Model\ResourceModel;
 
 /**
- * Grid Grid mysql resource.
+ * Helloimg Helloimg mysql resource.
  */
 class Grid extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
