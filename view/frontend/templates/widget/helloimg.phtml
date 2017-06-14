@@ -1,0 +1,10 @@
+<?php
+$HOST = 'http://192.168.33.10/pub/media/';
+$imageCollection = $this->getImageCollection($this->getData('helloimg'));
+?>
+<?php
+foreach ($imageCollection as $image) : ?>
+    <span class="img">
+        <img src="<?php echo $HOST.$image->getImage()?>" alt='<?php echo $image->getImgId() ?>'>
+    </span>
+<?php endforeach;?>

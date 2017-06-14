@@ -1,0 +1,11 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="helloimg_customwidget" class="Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Widget\Chooser">
+        <label translate="true">Helloimg Widget</label>
+        <description>This is a Helloimg Widget</description>
+        <parameters>
+            <parameter name="helloimg" xsi:type="select" source_model="Veriteworks\Helloimg\Model\Status" visible="true" sort_order="10" >
+                <label translate="true">Select Image</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

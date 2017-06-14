@@ -1,6 +1,6 @@
 <?php
 
-namespace Veriteworks\Helloimg\Block\Adminhtml\Grid;
+namespace Veriteworks\Helloimg\Block\Adminhtml\Helloimg;
 
 class AddRow extends \Magento\Backend\Block\Widget\Form\Container
 {

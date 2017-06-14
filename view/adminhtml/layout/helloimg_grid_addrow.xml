@@ -7,7 +7,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Veriteworks\Helloimg\Block\Adminhtml\Grid\AddRow" name="add_row" />
+            <block class="Veriteworks\Helloimg\Block\Adminhtml\Helloimg\AddRow" name="add_row" />
         </referenceContainer>
     </body>
 </page>
