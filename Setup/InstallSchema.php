@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tsuchiya
- * Date: 2016/11/01
- * Time: 14:39
- */
 
 namespace Veriteworks\Helloimg\Setup;
 
@@ -13,10 +7,6 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 use Magento\Framework\DB\Ddl\Table;
 
-/**
- * Class InstallSchema
- * @package Veriteworks\BannerSlider\Setup
- */
 class InstallSchema implements InstallSchemaInterface
 {
     /**

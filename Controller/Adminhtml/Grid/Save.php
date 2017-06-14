@@ -11,13 +11,24 @@ class Save extends \Magento\Backend\App\Action
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     protected $_gridFactory;
+    protected $_uploader;
+    protected $_adapterFactory;
+    protected $_filesystem;
+
 
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
+        \Magento\MediaStorage\Model\File\UploaderFactory $_uploader,
+        \Magento\Framework\Image\AdapterFactory $_adapterFactory,
+        \Magento\Framework\Filesystem $_filesystem,
         GridFactory $gridFactory
     )
     {
         $this->_gridFactory = $gridFactory;
+        $this->_uploader = $_uploader;
+        $this->_adapterFactory = $_adapterFactory;
+        $this->_filesystem = $_filesystem;
+
         parent::__construct($context);
     }
 
@@ -31,10 +42,36 @@ class Save extends \Magento\Backend\App\Action
         }
         try {
             $rowData = $this->_gridFactory->create();
-            $rowData->setData($data);
             if (isset($data['id'])) {
                 $rowData->setImgId($data['id']);
             }
+            if (isset($_FILES['image']) && isset($_FILES['image']['name']) && strlen($_FILES['image']['name'])) {
+                $base_media_path = 'veriteworks/helloimg/images';
+                $_uploader = $this->_uploader->create(
+                    ['fileId' => 'image']
+                );
+                $_uploader->setAllowedExtensions(['jpg', 'jpeg', 'gif', 'png']);
+                $imageAdapter = $this->_adapterFactory->create();
+                $_uploader->addValidateCallback('image', $imageAdapter, 'validateUploadFile');
+                $_uploader->setAllowRenameFiles(true);
+                $_uploader->setFilesDispersion(true);
+                $mediaDirectory = $this->_filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::MEDIA);
+                $result = $_uploader->save(
+                    $mediaDirectory->getAbsolutePath($base_media_path));
+                $data['image'] = $base_media_path . $result['file'];
+            } else {
+                if (isset($data['image']) && isset($data['image']['value'])) {
+                    if (isset($data['image']['delete'])) {
+                        $data['image'] = '';
+                        $data['delete_image'] = true;
+                    } elseif (isset($data['image']['value'])) {
+                        $data['image'] = $data['image']['value'];
+                    } else {
+                        $data['image'] = '';
+                    }
+                }
+            }
+            $rowData->setData($data);
             $rowData->save();
             $this->messageManager->addSuccess(__('Row data has been successfully saved.'));
         } catch (Exception $e) {

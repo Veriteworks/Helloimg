@@ -79,6 +79,18 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'required' => true,
             ]
         );
+        $fieldset->addField(
+            'image',
+            'image',
+            [
+                'name' => 'image',
+                'label' => __('Image'),
+                'id' => 'image',
+                'title' => __('Image'),
+                'class' => 'required-entry',
+                'required' => true,
+            ]
+        );
 
         $form->setValues($model->getData());
         $form->setUseContainer(true);
