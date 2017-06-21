@@ -41,15 +41,7 @@ class Time extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     {
         $dateFormat = $this->_localeDate->getDateFormat(\IntlDateFormatter::SHORT);
         $model = $this->_coreRegistry->registry('row_data');
-        $form = $this->_formFactory->create(
-            ['data' => [
-                'id' => 'edit_form',
-                'enctype' => 'multipart/form-data',
-                'action' => $this->getData('action'),
-                'method' => 'post'
-            ]
-            ]
-        );
+        $form = $this->_formFactory->create();
 
         $form->setHtmlIdPrefix('helloimg_');
         if ($model->getImgId()) {
@@ -67,21 +59,33 @@ class Time extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
         // $wysiwygConfig = $this->_wysiwygConfig->getConfig(['tab_id' => $this->getTabId()]);
 
-
         $fieldset->addField(
-            'time',
-            'text',
+            'date_to',
+            'date',
             [
-                'name' => 'time',
-                'label' => __('Time'),
-                'id' => 'time',
-                'title' => __('Time'),
-                'class' => 'required-entry',
-                'required' => true,
+                'name' => 'date_to',
+                'label' => __('Start Time'),
+                'title' => __('Start Time'),
+                'date_format' => $this->_localeDate->getDateFormat(\IntlDateFormatter::SHORT),
+                'time_format' => $this->_localeDate->getTimeFormat(\IntlDateFormatter::SHORT),
+                'class' => 'validate-date'
             ]
         );
+
+        $fieldset->addField(
+        'date_from',
+        'date',
+        [
+            'name' => 'date_from',
+            'label' => __('End Time'),
+            'title' => __('End Time'),
+            'date_format' => $this->_localeDate->getDateFormat(\IntlDateFormatter::SHORT),
+            'time_format' => $this->_localeDate->getTimeFormat(\IntlDateFormatter::SHORT),
+            'class' => 'validate-date'
+        ]
+    );
+
         $form->setValues($model->getData());
-        $form->setUseContainer(true);
         $this->setForm($form);
 
         return parent::_prepareForm();

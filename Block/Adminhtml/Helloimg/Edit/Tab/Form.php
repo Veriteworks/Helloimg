@@ -41,15 +41,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     {
         $dateFormat = $this->_localeDate->getDateFormat(\IntlDateFormatter::SHORT);
         $model = $this->_coreRegistry->registry('row_data');
-        $form = $this->_formFactory->create(
-            ['data' => [
-                'id' => 'edit_form',
-                'enctype' => 'multipart/form-data',
-                'action' => $this->getData('action'),
-                'method' => 'post'
-            ]
-            ]
-        );
+        $form = $this->_formFactory->create();
 
         $form->setHtmlIdPrefix('helloimg_');
         if ($model->getImgId()) {
@@ -94,7 +86,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         );
 
         $form->setValues($model->getData());
-        $form->setUseContainer(true);
         $this->setForm($form);
 
         return parent::_prepareForm();

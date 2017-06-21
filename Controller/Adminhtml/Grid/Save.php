@@ -59,7 +59,8 @@ class Save extends \Magento\Backend\App\Action
                 $result = $_uploader->save(
                     $mediaDirectory->getAbsolutePath($base_media_path));
                 $data['image'] = $base_media_path . $result['file'];
-            } else {
+            }
+            else {
                 if (isset($data['image']) && isset($data['image']['value'])) {
                     if (isset($data['image']['delete'])) {
                         $data['image'] = '';
@@ -70,6 +71,13 @@ class Save extends \Magento\Backend\App\Action
                         $data['image'] = '';
                     }
                 }
+            }
+            if(isset($data['date_to']) && isset($data['date_from'])){
+                $rowData->setDateTo($data['date_to']);
+                $rowData->setDateFrom($data['date_from']);
+            }
+            else{
+
             }
             $rowData->setData($data);
             $rowData->save();
