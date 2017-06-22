@@ -44,6 +44,18 @@ class InstallSchema implements InstallSchemaInterface
             255,
             ['nullable' => true],
             'Image'
+        )->addColumn(
+            'date_to',
+            \Magento\Framework\DB\Ddl\Table::TYPE_DATETIME,
+            ['nullable' => true],
+            [],
+            'Date to'
+        )->addColumn(
+            'date_from',
+            \Magento\Framework\DB\Ddl\Table::TYPE_DATETIME,
+            ['nullable' => true],
+            [],
+            'Date from'
         );
 
         $installer->getConnection()->createTable($table);

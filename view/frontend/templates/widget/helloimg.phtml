@@ -1,10 +1,11 @@
 <?php
 $HOST = 'http://192.168.33.10/pub/media/';
 $imageCollection = $this->getImageCollection($this->getData('helloimg'));
+date_default_timezone_set('Asia/Tokyo');
 ?>
 <?php
 foreach ($imageCollection as $image) : ?>
-    <span class="img">
+        <span class="img">
         <img src="<?php echo $HOST.$image->getImage()?>" alt='<?php echo $image->getImgId() ?>'>
-    </span>
+        </span>
 <?php endforeach;?>

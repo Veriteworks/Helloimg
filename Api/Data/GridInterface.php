@@ -10,6 +10,8 @@ interface GridInterface
     const IMG_ID = 'img_id';
     const TITLE = 'title';
     const IMAGE = 'image';
+    const DATETO = 'date_to';
+    const DATEFROM = 'date_from';
 
     public function getImgId();
     public function setImgId($img_id);
@@ -17,4 +19,8 @@ interface GridInterface
     public function setTitle($title);
     public function getImage();
     public function setImage($image);
+    public function getDateTo();
+    public function setDateTo($dateto);
+    public function getDateFrom();
+    public function setDateFrom($datefrom);
 }

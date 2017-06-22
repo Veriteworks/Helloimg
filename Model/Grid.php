@@ -40,4 +40,20 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
     {
         return $this->setData(self::IMAGE, $image);
     }
+    public function getDateTo()
+    {
+    return $this->getData(self::DATETO);
+    }
+    public function setDateTo($dateto)
+    {
+        return $this->setData(self::DATETO, $dateto);
+    }
+    public function getDateFrom()
+    {
+        return $this->getData(self::DATEFROM);
+    }
+    public function setDateFrom($datefrom)
+    {
+        return $this->setData(self::DATEFROM, $datefrom);
+    }
 }

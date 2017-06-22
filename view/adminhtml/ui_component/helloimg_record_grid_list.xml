@@ -162,6 +162,22 @@
                 </item>
             </argument>
         </column>
+        <column name="date_to">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">false</item>
+                    <item name="label" xsi:type="string" translate="true">Date to</item>
+                </item>
+            </argument>
+        </column>
+        <column name="date_from">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="filter" xsi:type="string">false</item>
+                <item name="label" xsi:type="string" translate="true">Date from</item>
+            </item>
+        </argument>
+    </column>
         <!-- Add Action with each row of grid and for this we will create a class Action -->
         <actionsColumn name="actions" class="Veriteworks\Helloimg\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">
