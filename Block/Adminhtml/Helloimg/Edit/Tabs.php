@@ -59,17 +59,17 @@ class Tabs extends \Magento\Backend\Block\Widget\Tabs
                 )
             ]
         );
-        $this->addTab(
-        'level2',
-        [
-            'label' => __('Level2'),
-            'content' => $this->_translateHtml(
-                $this->getLayout()->createBlock(
-                    'Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit\Tab\Time'
-                )->toHtml()
-            )
-        ]
-    );
+            $this->addTab(
+                'level2',
+                [
+                    'label' => __('Level2'),
+                    'content' => $this->_translateHtml(
+                        $this->getLayout()->createBlock(
+                            'Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit\Tab\Hoge'
+                        )->toHtml()
+                    )
+                ]
+            );
         return parent::_prepareLayout();
     }
 
