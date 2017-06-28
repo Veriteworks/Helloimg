@@ -2,6 +2,10 @@
 
 namespace Veriteworks\Helloimg\Model\ResourceModel\Grid;
 
+/**
+ * Class Collection
+ * @package Veriteworks\Helloimg\Model\ResourceModel\Grid
+ */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
     /**

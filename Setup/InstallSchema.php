@@ -7,6 +7,10 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 use Magento\Framework\DB\Ddl\Table;
 
+/**
+ * Class InstallSchema
+ * @package Veriteworks\Helloimg\Setup
+ */
 class InstallSchema implements InstallSchemaInterface
 {
     /**

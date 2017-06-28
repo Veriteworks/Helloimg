@@ -7,6 +7,10 @@ use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
 use Magento\Framework\UrlInterface;
 
+/**
+ * Class Action
+ * @package Veriteworks\Helloimg\Ui\Component\Listing\Grid\Column
+ */
 class Action extends Column
 {
     /** Url path */

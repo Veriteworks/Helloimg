@@ -4,6 +4,10 @@ namespace Veriteworks\Helloimg\Controller\Adminhtml\Grid;
 
 use Veriteworks\Helloimg\Model\GridFactory;
 
+/**
+ * Class Save
+ * @package Veriteworks\Helloimg\Controller\Adminhtml\Grid
+ */
 class Save extends \Magento\Backend\App\Action
 {
     /**

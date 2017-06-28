@@ -2,6 +2,10 @@
 
 namespace Veriteworks\Helloimg\Block\Adminhtml\Helloimg;
 
+/**
+ * Class AddRow
+ * @package Veriteworks\Helloimg\Block\Adminhtml\Helloimg
+ */
 class AddRow extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**

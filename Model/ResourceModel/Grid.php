@@ -5,6 +5,10 @@ namespace Veriteworks\Helloimg\Model\ResourceModel;
 /**
  * Helloimg Helloimg mysql resource.
  */
+/**
+ * Class Grid
+ * @package Veriteworks\Helloimg\Model\ResourceModel
+ */
 class Grid extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**

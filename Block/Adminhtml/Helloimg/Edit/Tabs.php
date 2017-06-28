@@ -6,6 +6,10 @@ use Magento\Backend\Model\Auth\Session;
 use Magento\Framework\Json\EncoderInterface;
 use Magento\Framework\Translate\InlineInterface;
 
+/**
+ * Class Tabs
+ * @package Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit
+ */
 class Tabs extends \Magento\Backend\Block\Widget\Tabs
 {
     /**

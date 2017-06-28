@@ -5,6 +5,10 @@ namespace Veriteworks\Helloimg\Controller\Adminhtml\Grid;
 use Magento\Framework\Controller\ResultFactory;
 use Veriteworks\Helloimg\Model\GridFactory;
 
+/**
+ * Class AddRow
+ * @package Veriteworks\Helloimg\Controller\Adminhtml\Grid
+ */
 class AddRow extends \Magento\Backend\App\Action
 {
     /**
@@ -12,8 +16,17 @@ class AddRow extends \Magento\Backend\App\Action
      * @param \Magento\Framework\Registry    $coreRegistry
      */
     protected $_storeManager;
+    /**
+     * @var GridFactory
+     */
     protected $_gridFactory;
 
+    /**
+     * AddRow constructor.
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry $coreRegistry
+     * @param GridFactory $gridFactory
+     */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $coreRegistry,
@@ -51,6 +64,10 @@ class AddRow extends \Magento\Backend\App\Action
         $resultPage->getConfig()->getTitle()->prepend($title);
         return $resultPage;
     }
+
+    /**
+     * @return bool
+     */
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('Veriteworks_Helloimg::add_row');

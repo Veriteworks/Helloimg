@@ -3,6 +3,10 @@
 namespace Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit\Tab;
 
 
+/**
+ * Class Time
+ * @package Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit\Tab
+ */
 class Time extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface
 {
     /**

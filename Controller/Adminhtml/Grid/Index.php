@@ -2,6 +2,10 @@
 
 namespace Veriteworks\Helloimg\Controller\Adminhtml\Grid;
 
+/**
+ * Class Index
+ * @package Veriteworks\Helloimg\Controller\Adminhtml\Grid
+ */
 class Index extends \Magento\Backend\App\Action
 {
     /**

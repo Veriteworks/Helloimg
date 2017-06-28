@@ -2,6 +2,10 @@
 namespace Veriteworks\Helloimg\Model;
 use Veriteworks\Helloimg\Model\ResourceModel\Grid\CollectionFactory;
 
+/**
+ * Class Status
+ * @package Veriteworks\Helloimg\Model
+ */
 class Status implements \Magento\Framework\Option\ArrayInterface
 {
     /**
@@ -9,6 +13,10 @@ class Status implements \Magento\Framework\Option\ArrayInterface
      */
     protected $_gridCollectionFactory;
 
+    /**
+     * Status constructor.
+     * @param CollectionFactory $gridCollectionFactory
+     */
     public function __construct(
         CollectionFactory $gridCollectionFactory
     ){

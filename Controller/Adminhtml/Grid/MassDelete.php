@@ -8,6 +8,10 @@ use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use Veriteworks\Helloimg\Model\ResourceModel\Grid\CollectionFactory;
 
+/**
+ * Class MassDelete
+ * @package Veriteworks\Helloimg\Controller\Adminhtml\Grid
+ */
 class MassDelete extends \Magento\Backend\App\Action
 {
     /**

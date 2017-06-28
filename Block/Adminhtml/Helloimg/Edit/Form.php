@@ -5,6 +5,10 @@ namespace Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit;
  * Class Form
  * @package Veriteworks\Helloimg\Block\Adminhtml\Slider\Edit
  */
+/**
+ * Class Form
+ * @package Veriteworks\Helloimg\Block\Adminhtml\Helloimg\Edit
+ */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic
 {
     /**
